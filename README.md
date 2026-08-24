@@ -2,7 +2,7 @@
 
 한국 DOS판 **《Dragon Slayer: The Legend of Heroes II / 영웅전설 II》**를 대상으로 하는 종합 개선 패치 프로젝트입니다.
 
-현재 기준 버전은 **v1.4.48**이며, 대사·표시·밸런스·오디오·QoL·바이너리 버그 수정을 하나의 상호운용 가능한 패치 세트로 관리합니다. 버전별 변경 이력 문서는 별도로 유지하지 않으며, 변경 기록은 Git 커밋과 GitHub Releases를 사용합니다.
+현재 기준 버전은 **v1.4.50**이며, 대사·표시·밸런스·오디오·QoL·바이너리 버그 수정을 하나의 상호운용 가능한 패치 세트로 관리합니다. 버전별 변경 이력 문서는 별도로 유지하지 않으며, 변경 기록은 Git 커밋과 GitHub Releases를 사용합니다.
 
 ## 주요 기능
 
@@ -12,6 +12,7 @@
 - 몬스터·전투 편성·EXP/Gold·레벨 요구 EXP 밸런스 조정
 - M_504 다다르카·악토스 전투 복원
 - 지하동굴 맵 간소화 프리셋
+- 일반 필드·던전 심볼 인카운트 밀도 완화(선택 가능, 기본 활성)
 - Shift 고속 이동 등 QoL 기능
 - 교체 VGM / 원본 MUS 선택형 BGM 모드, 22,050 Hz 효과음, 전사의 피리 BGM 보정
 - PC-98 기반 오프닝, 엔딩, 장 제목 및 최종전 연출 보정
@@ -19,7 +20,7 @@
 
 ## 설치
 
-가장 간단한 방법은 `ED2_All_In_One_Patcher_v1.4.45` 폴더의 `run_all_in_one.bat`를 실행하는 것입니다.
+가장 간단한 방법은 `ED2_All_In_One_Patcher_v1.4.50` 폴더의 `run_all_in_one.bat`를 실행하는 것입니다.
 
 1. 패치할 한국 DOS판 영웅전설 II 게임 폴더를 선택합니다.
 2. 기본 구성요소 전체 적용 또는 필요한 항목만 선택합니다.
@@ -29,16 +30,16 @@
 Python으로 직접 실행할 수도 있습니다.
 
 ```text
-python ED2_All_In_One_Patcher_v1.4.45/ed2_all_in_one_patcher.py
+python ED2_All_In_One_Patcher_v1.4.50/ed2_all_in_one_patcher.py
 ```
 
 CLI 예시:
 
 ```text
-python ED2_All_In_One_Patcher_v1.4.45/ed2_all_in_one_patcher.py "C:\ED2" --apply-all --no-gui
-python ED2_All_In_One_Patcher_v1.4.45/ed2_all_in_one_patcher.py "C:\ED2" --apply-all --music-mode original --no-gui
-python ED2_All_In_One_Patcher_v1.4.45/ed2_all_in_one_patcher.py "C:\ED2" --components dialogue,text,vgm_bgm --no-gui
-python ED2_All_In_One_Patcher_v1.4.45/ed2_all_in_one_patcher.py "C:\ED2" --validate --no-gui
+python ED2_All_In_One_Patcher_v1.4.50/ed2_all_in_one_patcher.py "C:\ED2" --apply-all --no-gui
+python ED2_All_In_One_Patcher_v1.4.50/ed2_all_in_one_patcher.py "C:\ED2" --apply-all --music-mode original --no-gui
+python ED2_All_In_One_Patcher_v1.4.50/ed2_all_in_one_patcher.py "C:\ED2" --components dialogue,text,vgm_bgm --no-gui
+python ED2_All_In_One_Patcher_v1.4.50/ed2_all_in_one_patcher.py "C:\ED2" --validate --no-gui
 ```
 
 Python **3.10 이상**을 권장합니다. Windows에서는 `run_all_in_one.bat`가 `py -3`을 먼저 사용하고, 실패하면 `python`을 사용합니다.
@@ -69,8 +70,8 @@ AIO에서는 두 가지 BGM 소스를 선택할 수 있습니다.
 
 ## 저장소 구성
 
-- `ED2_All_In_One_Patcher_v1.4.45/` — 권장 통합 설치기
-- `ED2_Text_and_Dialogue_Revision_Pack_v4.1R51/` — 대사/텍스트 정본 및 패처
+- `ED2_All_In_One_Patcher_v1.4.50/` — 권장 통합 설치기
+- `ED2_Text_and_Dialogue_Revision_Pack_v4.1R52/` — 대사/텍스트 정본 및 패처
 - `ED2-MOD-Studio-v0.13.1/` — 데이터 분석·편집 GUI/CLI
 - `ED2_Map_Editor_v0.5.7/` — 맵·지하동굴 편집기
 - `ED2_VGM_BGM_Engine_v0.5.49_Combined/` — VGM BGM 엔진 및 Raw OPL 도구
